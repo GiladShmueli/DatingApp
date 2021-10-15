@@ -1,0 +1,13 @@
+Unable to generate assets to build and debug. OmniSharp server is not running.
+
+dotnet dev-certs https --trust (different output 8 1:46)
+
+after installing Entity.Framework.Design: (marked in warning yellow)
+The Entity Framework tools version '5.0.6' is older than that of the runtime '5.0.11'. Update the tools for the latest features and bug fixes.
+
+missing:
+datingapp.db-shm
+datingapp.db-wal
+
+
+it's important to specify prefix of https://
