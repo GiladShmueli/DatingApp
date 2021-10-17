@@ -10,4 +10,7 @@ datingapp.db-shm
 datingapp.db-wal
 
 
-it's important to specify prefix of https://
+it's important to specify prefix of https://localhost:5001/api/users though it seems like we're not going to open it alone.
+
+
+Access to XMLHttpRequest at 'https://localhost:5001/api/users' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
