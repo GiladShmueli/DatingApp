@@ -14,3 +14,26 @@ it's important to specify prefix of https://localhost:5001/api/users though it s
 
 
 Access to XMLHttpRequest at 'https://localhost:5001/api/users' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+adding a migration of authentication:
+dotnet ef migrations add UserPasswordAdded
+dotnet ef database update
+
+
+--- section 4
+
+postman 404 Unable to verify the first certificate (part 35)
+
+dotnet dev-certs https --trust =>
+Trusting the HTTPS development certificate was requested. A confirmation prompt will be displayed if the certificate was not previously trusted. Click yes on 
+the prompt to trust the certificate.
+A valid HTTPS certificate is already present.
+
+solutions online kept saying disable SSL on Postman, or get the CER file for the CA Certificate.
+
+my solution: going on Visual Studio (not Code) and running from there the IIS Express - 
+my suspicion: in Startup.cs in ConfigureServices method,
+the AddSwaggerGen method wasn't in the tutorial, thus diverting the routing somehow, affecting the certificate acknowledgement.
+Worked in SwaggerUI. For now I move to there, 20/10/2021
+
+found the issue: the port number changed. Again, assuming it's got to do with Swagger.
