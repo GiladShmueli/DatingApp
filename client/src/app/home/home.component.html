@@ -1,0 +1,24 @@
+
+<div *ngIf="!registerMode" class="container mt-5">
+    <div style="text-align: center;">
+        <h1>Find your match</h1>
+        <p class="lead">come on and find your true love</p>
+        <div class="text-center">
+            <button (click)="registerToggle()" class="btn btn-primary btn=lg mr-2">Register</button>
+            <button class="btn btn-primary btn=lg mr-2">Learn more</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="registerMode" class="container">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <!-- parent to child communication using [] -->
+            <!-- child to parent communication using () note: registerToggle() works as well without using the event itself -->
+            <!-- [usersFromHomeComponent]="users" -->
+            <app-register  (cancelRegister)="cancelRegisterMode($event)"></app-register> 
+        </div>
+    </div>
+</div>
+
+

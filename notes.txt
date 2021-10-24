@@ -1,0 +1,37 @@
+Unable to generate assets to build and debug. OmniSharp server is not running.
+
+dotnet dev-certs https --trust (different output 8 1:46)
+
+after installing Entity.Framework.Design: (marked in warning yellow)
+The Entity Framework tools version '5.0.6' is older than that of the runtime '5.0.11'. Update the tools for the latest features and bug fixes.
+
+missing:
+datingapp.db-shm
+datingapp.db-wal
+
+
+it's important to specify prefix of https://localhost:5001/api/users though it seems like we're not going to open it alone.
+
+
+Access to XMLHttpRequest at 'https://localhost:5001/api/users' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+adding a migration of authentication:
+dotnet ef migrations add UserPasswordAdded
+dotnet ef database update
+
+
+--- section 4
+
+postman 404 Unable to verify the first certificate (part 35)
+
+dotnet dev-certs https --trust =>
+Trusting the HTTPS development certificate was requested. A confirmation prompt will be displayed if the certificate was not previously trusted. Click yes on 
+the prompt to trust the certificate.
+A valid HTTPS certificate is already present.
+
+solutions online kept saying disable SSL on Postman, or get the CER file for the CA Certificate.
+
+tried several ideas till I forfeited to it, and used Neil's files. Was looking through the files to see the changes, but it was quite hard to follow.
+
+
+there was an error for an unknown reason. apparently my push "destroyed" all prior commits, and I don't know how to restore them.
