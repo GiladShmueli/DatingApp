@@ -1,7 +1,9 @@
 <!--what we see here is sort of a binding with the app.components.ts file exported class-->
 <!--hovering doesn't make Angular Language Service pop what title is, seems like loading fails-->
-<h1>{{title}}</h1> 
+<app-nav></app-nav>
 
+<div class="container" style="margin-top: 100px">
 <ul>
     <li *ngFor='let user of users'>{{user.id}} - {{user.userName}}</li>
 </ul>
+</div>
