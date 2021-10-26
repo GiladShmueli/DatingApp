@@ -35,3 +35,10 @@ tried several ideas till I forfeited to it, and used Neil's files. Was looking t
 
 
 there was an error for an unknown reason. apparently my push "destroyed" all prior commits, and I don't know how to restore them.
+
+
+section 6
+after creating lots of components app.component.html refuses to acknowledge my previous components. 
+Cause: I made a typing mistake writing list instead of lists. Fortunately I found it fast in app.module.ts
+
+part 70 - ng-component made the app break: the router-outlet broke into the nav-bar. while removing the ng-component it magically worked
