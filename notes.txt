@@ -42,3 +42,13 @@ after creating lots of components app.component.html refuses to acknowledge my p
 Cause: I made a typing mistake writing list instead of lists. Fortunately I found it fast in app.module.ts
 
 part 70 - ng-component made the app break: the router-outlet broke into the nav-bar. while removing the ng-component it magically worked
+
+
+section 7
+
+//manually fixed the error.statusText
+                //apparantly asp.net removed the statusText property https://readdy.net/Notes/Details/1973
+                // either that is the problem or the fact that we "solved" the issue.
+                // a better way to handle this would be enum or something alike to keep it cleaner and clearer, 
+                // or to find another way online, but I want to progress more.
+            error.interceptor.ts, ExceptionMiddleware.cs
